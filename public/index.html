@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>My-Portfilo.site</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/app.css">
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+</head>
+<body>
+
+    <div id="loading">
+        <img src="./images/131.gif">
+    </div>
+<div id="app">
+
+<v-app light>
+
+<div id="start_up">
+
+	<div id="overlay_wrap" style="display: none">
+		<div class="overlay" id="overlay">
+      <p class="bigText">My-Portfilo</p>
+
+      
+			<div class="intro">
+				<button class="myBtn" onclick="window.fadeOut()"><span clsss="tor">EXPLORE</span></button>
+			</div>
+		</div>
+		<div class="overlay2"></div>
+		<div class="overlay3"></div>
+		<div class="overlay4"></div>
+	</div> 
+</div>
+
+<v-content>
+      <v-container>
+        <v-layout row wrap align-center>
+          <v-flex xs12 md12>
+            <div class="text-xs-center">
+              <v-avatar size="125px">
+                <img
+                  class="img-circle elevation-7 mb-1"
+                  src="./images/icon.jpg"
+                >
+              </v-avatar>
+              <br><br><br>
+              <h1 class="mainLogo" id="mainLogo">My-Portfolio.site</h1>
+
+
+              <div class="headline"><span>M.Inoue</span></div>
+              <div class="subheading text-xs-center grey--text pt-1 pb-3">Web engineer</div>
+PHPを中心にプログラミングしています。<br>
+Laravel / VueでWebサービスを作っています。<br>
+
+ご用命があればメールまたはTwitter DMでお待ちしております。<br>
+&#109;&#97;&#105;l&#116;o&#58;&#112;&#97;steu&#114;1822&#64;g&#109;a&#105;l&#46;com
+<br>
+
+<v-btn
+href="https://twitter.com/OCRusion" 
+round 
+color="blue lighten-2" 
+class="white--text" 
+
+>
+<span class="icon-twitter"></span>
+&nbsp;
+Twitter
+
+</v-btn>
+<a href="https://twitter.com/OCRusion"></a>
+
+<v-btn
+round 
+color="grey darken-4" 
+class="white--text" 
+href="https://github.com/devinoue" 
+>
+<span class="icon-github"></span> 
+&nbsp;Github
+</v-btn>
+
+<br><br>
+<div id="cards" style="display: none">
+<v-card tile href="https://ocrusion.my-portfolio.site/" width="400" class="v_card" id="v_card">
+  <v-img
+    src="./images/_ocrusion.jpg"
+    aspect-ratio="1.91"
+    ></v-img>
+
+  <v-card-title primary-title>
+      <div>
+      <h3 class="headline mb-0">OCRusionリリースしました</h3>
+      <div>2018/10/14<br>日本発としては初の無料OCRサービス『OCRusion』リリースしました<br>
+        現在はアルファ版です。<br>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=OCRusion&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #OCRusion</a>
+      </div>
+    </div>
+  </v-card-title>
+</v-card>
+</div>
+          </v-flex>
+          <v-flex xs12 md5 offset-md2>
+          </v-flex>
+          </div>
+        </v-layout>
+      </v-container>
+    </v-content>
+ 
+<br><br>
+  </v-app>
+ </div>
+
+ <script src="js/app.js"></script>
+ <script>
+    imagesLoaded('.overlay',{ background: true }, function() {
+      TweenMax.to("#loading",1, {
+            display:'none',
+            opacity: 0,
+            ease: Power2.easeInOut
+      });
+    });
+</script>
+
+</body>
+</html>

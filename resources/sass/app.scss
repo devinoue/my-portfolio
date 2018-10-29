@@ -1,0 +1,220 @@
+@import '../../node_modules/vuetify/dist/vuetify.min';
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+body{
+line-height: 1.5;
+}
+ .v-btn {
+	z-index : 0;
+}
+.v-content {
+	z-index : 0;
+}
+.align-center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.content{
+	width: 60%;
+	margin: 0 auto;
+	z-index:  0;
+	position: absolute;
+	top: 60%;
+	left: 10%;
+	transform: translate(0, -50%);
+
+}
+
+.content h1{
+	font-size: 8rem;
+	color: #101010;
+	margin-bottom: 10px;
+}
+.content p{
+	margin-top: 0;
+
+	color: #101010;
+	font-weight: 400;
+}
+
+#loading{
+	position: fixed;
+	z-index: 5;
+	position: absolute;
+	background: rgb(43, 43, 43);
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+.overlay2{
+	z-index: 3;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background:#943baf;
+}
+.overlay3{
+	z-index: 2;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: #35fff8;
+}
+.overlay4{
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: #ffbf1e;
+}
+
+.overlay{
+
+	z-index: 4;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: url('../images/bg.jpg') 50% / cover;
+
+}
+.mainLogo{
+	font-family: 'Josefin Sans', sans-serif;
+	opacity: 0;
+	line-height: 0.9;
+	
+}
+
+/*背景の巨大文字*/
+.bigText{
+	color: #ffffff;
+	font-family: 'Josefin Sans', sans-serif;
+	position: absolute;
+	white-space: nowrap;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 200px;
+	font-weight: 800; 
+
+}
+
+/*中心におく*/
+.myBtn{
+	cursor: default;
+	font-family: 'Josefin Sans', sans-serif;
+	position: absolute;
+	top: 50%;  left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: block;
+	padding:24px 48px;
+	font-weight: 400;
+	font-size: 18px;
+	letter-spacing: 6px;
+	color: rgb(43, 43, 43);
+	border: 2px solid #fff;
+	text-transform: uppercase;
+	outline:none;
+	overflow: hidden;
+	background: #fafafa8d;
+	z-index: 1;
+	transition: 0.8s ease-out;
+
+	&:hover{
+		color: #101010;
+		animation: anim .4s infinite;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		background: #fff;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 100%;
+		z-index:4;
+		transition: top 0.8s ease-out;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left : -100%;
+		z-index: 4;
+		transition: top 0.8s ease-out;
+
+	}
+	&:after:hover{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left : 0;
+		transition: top 0.8s ease-out;
+
+	}
+	
+
+}
+
+@keyframes anim {
+0%{
+		background: magenta;
+	}
+	40%{
+		background: yellow;
+	}	60%{
+		background: black;
+	}	80%{
+		background: cyan;
+	}
+}
+
+
+
+
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?hg0dv1');
+	src:  url('../fonts/icomoon.eot?hg0dv1#iefix') format('embedded-opentype'),
+	  url('../fonts/icomoon.ttf?hg0dv1') format('truetype'),
+	  url('../fonts/icomoon.woff?hg0dv1') format('woff'),
+	  url('../fonts/icomoon.svg?hg0dv1#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+  
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-twitter:before {
+	content: "\ea96";
+  }
+  .icon-github:before {
+	content: "\eab0";
+  }
